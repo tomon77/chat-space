@@ -1,1 +1,28 @@
-＜サイドバー＞
+.chat-side
+  .chat-side__user-name
+    .chat-side__user-name__top-items
+      .chat-side__user-name__top-items__name 
+        masa
+      .chat-side__user-name__top-items__icons 
+        = link_to "#", class: "strong" do
+          = icon('fa', 'edit')
+          %span<>
+        = link_to "#", class: "strong" do
+          = icon('fa', 'cog')
+          %span<>
+  .chat-side__group-list
+    .chat-side__group-list__group
+      .chat-side__group-list__group__name
+        techcamp
+      .chat-side__group-list__group__message
+        まだメッセージがありません
+    .chat-side__group-list__group
+      .chat-side__group-list__group__name
+        techcamp2
+      .chat-side__group-list__group__message
+        こんにちはー
+    .chat-side__group-list__group
+      .chat-side__group-list__group__name
+        techcamp3
+      .chat-side__group-list__group__message
+        よろしく
