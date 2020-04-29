@@ -1,0 +1,48 @@
+.chat-main__messages__message
+  .chat-main__messages__message__upper-message
+    .chat-main__messages__message__upper-message__name
+      = message.user.name
+    .chat-main__messages__message__upper-message__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .chat-main__messages__message__lower-message
+    - if message.content.present?
+      %p.chat-main__messages__message__lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'chat-main__messages__message__lower-message__image' if message.image.present?
+
+-# (message仮の物)    
+  -# .chat-main__message-list
+  -#   .chat-main__message-list__info
+  -#     .chat-main__message-list__info__name
+  -#       masa
+  -#     .chat-main__message-list__info__date
+  -#       2019/11/20(wed) 17:43:01
+  -#   .chat-main__message-list__message
+  -#     おはよう！
+  -#   .chat-main__message-list__info
+  -#     .chat-main__message-list__info__name
+  -#       masa
+  -#     .chat-main__message-list__info__date
+  -#       2019/11/21(thu) 12:42:33
+  -#   .chat-main__message-list__message
+  -#     こんにちは！
+  -#   .chat-main__message-list__info
+  -#     .chat-main__message-list__info__name
+  -#       masa
+  -#     .chat-main__message-list__info__date
+  -#       2019/11/21(thu) 19:23:56
+  -#   .chat-main__message-list__message
+  -#     こんばんは！
+
+  (message模範回答元の物)
+  -# .message
+  -# .upper-message
+  -#   .upper-message__user-name
+  -#     = message.user.name
+  -#   .upper-message__date
+  -#     = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  -# .lower-message
+  -#   - if message.content.present?
+  -#     %p.lower-message__content
+  -#       = message.content
+  -#   = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
