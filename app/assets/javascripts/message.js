@@ -1,52 +1,52 @@
 $(function(){
   function buildHTML(message) {
     if (message.content && message.image) {
-      var html = `<div class="chat-main__messages__message">` +
-        `<div class="chat-main__messages__message__upper-message">` +
-        `<div class="chat-main__messages__message__upper-message__name">` +
-        message.user_name +
-        `</div>` +
-        `<div class="chat-main__messages__message__upper-message__date">` +
-        message.created_at +
-        `</div>` +
-        `</div>` +
-        `<div class="chat-main__messages__message__lower-message">` +
-        `<p class="chat-main__messages__message__lower-message__content">` +
-        message.content +
-        `</p>` +
-        `<img src="` + message.image + `"class="chat-main__messages__message__lower-message__image" >` +
-        `</div>` +
-        `</div>`
+      var html = `<div class="chat-main__messages__message">
+        <div class="chat-main__messages__message__upper-message">
+        <div class="chat-main__messages__message__upper-message__name">
+        ${message.user_name}
+        </div>
+        <div class="chat-main__messages__message__upper-message__date">
+        ${message.created_at}
+        </div>
+        </div>
+        <div class="chat-main__messages__message__lower-message">
+        <p class="chat-main__messages__message__lower-message__content">
+        ${message.content}
+        </p>
+        <img src="${message.image}" class="chat-main__messages__message__lower-message__image" >
+        </div>
+        </div>`
     } else if (message.content) {
-      var html = `<div class="chat-main__messages__message">` +
-        `<div class="chat-main__messages__message__upper-message">` +
-        `<div class="chat-main__messages__message__upper-message__name">` +
-        message.user_name +
-        `</div>` +
-        `<div class="chat-main__messages__message__upper-message__date">` +
-        message.created_at +
-        `</div>` +
-        `</div>` +
-        `<div class="chat-main__messages__message__lower-message">` +
-        `<p class="chat-main__messages__message__lower-message__content">` +
-        message.content +
-        `</p>` +
-        `</div>` +
-        `</div>`
+      var html = `<div class="chat-main__messages__message">
+        <div class="chat-main__messages__message__upper-message">
+        <div class="chat-main__messages__message__upper-message__name">
+        ${message.user_name}
+        </div>
+        <div class="chat-main__messages__message__upper-message__date">
+        ${message.created_at}
+        </div>
+        </div>
+        <div class="chat-main__messages__message__lower-message">
+        <p class="chat-main__messages__message__lower-message__content">
+        ${message.content}
+        </p>
+        </div>
+        </div>`
     } else if (message.image) {
-      var html = `<div class="chat-main__messages__message">` +
-        `<div class="chat-main__messages__message__upper-message">` +
-        `<div class="chat-main__messages__message__upper-message__name">` +
-        message.user_name +
-        `</div>` +
-        `<div class="chat-main__messages__message__upper-message__date">` +
-        message.created_at +
-        `</div>` +
-        `</div>` +
-        `<div class="chat-main__messages__message__lower-message">` +
-        `<img src="` + message.image + `"class="chat-main__messages__message__lower-message__image" >` +
-        `</div>` +
-        `</div>`
+      var html = `<div class="chat-main__messages__message">
+        <div class="chat-main__messages__message__upper-message">
+        <div class="chat-main__messages__message__upper-message__name">
+        ${message.user_name}
+        </div>
+        <div class="chat-main__messages__message__upper-message__date">
+        ${message.created_at}
+        </div>
+        </div>
+        <div class="chat-main__messages__message__lower-message">
+        <img src="${message.image}" class="chat-main__messages__message__lower-message__image" >
+        </div>
+        </div>`
     };
     return html;
   }
@@ -75,3 +75,5 @@ $(function(){
     });
   });
 });
+
+
